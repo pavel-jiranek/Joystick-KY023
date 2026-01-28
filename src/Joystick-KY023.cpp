@@ -7,8 +7,8 @@ OutputType myMap(InputType value, InputType inMin, InputType inMax, OutputType o
 }
 }  // namespace
 
-JoystickKY023::JoystickKY023(pin_size_t xPin, pin_size_t yPin, pin_size_t switchPin, float zeroToleranceRange,
-    uint8_t analogReadResolutionBits, PinMode switchPinMode)
+JoystickKY023::JoystickKY023(uint8_t xPin, uint8_t yPin, uint8_t switchPin, float zeroToleranceRange,
+    uint8_t analogReadResolutionBits, uint8_t switchPinMode)
     : _xPin(xPin), _yPin(yPin), _switchPin(switchPin), _zeroToleranceRange(zeroToleranceRange) {
   _analogReadMax = (1 << analogReadResolutionBits) - 1;
 

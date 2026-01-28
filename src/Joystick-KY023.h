@@ -13,8 +13,8 @@ class JoystickKY023 {
   /// @param zeroToleranceRange The range of the zero value.
   /// @param analogReadResolutionBits The number of bits for the analog read resolution.
   /// @param switchPinMode The mode for the switch pin.
-  JoystickKY023(pin_size_t xPin, pin_size_t yPin, pin_size_t switchPin, float zeroToleranceRange = 0.01f,
-      uint8_t analogReadResolutionBits = 10, PinMode switchPinMode = INPUT_PULLUP);
+  JoystickKY023(uint8_t xPin, uint8_t yPin, uint8_t switchPin, float zeroToleranceRange = 0.01f,
+      uint8_t analogReadResolutionBits = 10, uint8_t switchPinMode = INPUT_PULLUP);
 
   /// @brief Calibrate the joystick to find the center point.
   /// @details The function assumes that the joystick is centered when the
@@ -31,9 +31,9 @@ class JoystickKY023 {
   bool isSwitchPressed() const;
 
  private:
-  pin_size_t _xPin;
-  pin_size_t _yPin;
-  pin_size_t _switchPin;
+  uint8_t _xPin;
+  uint8_t _yPin;
+  uint8_t _switchPin;
   float _zeroToleranceRange;
   uint16_t _analogReadMax;
 
